@@ -1,0 +1,136 @@
+       01  MAP01I.
+           02  FILLER PIC X(12).
+           02  TRANSACL    COMP  PIC  S9(4).
+           02  TRANSACF    PICTURE X.
+           02  FILLER REDEFINES TRANSACF.
+             03 TRANSACA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TRANSACI  PIC X(4).
+           02  TITRFLDL    COMP  PIC  S9(4).
+           02  TITRFLDF    PICTURE X.
+           02  FILLER REDEFINES TITRFLDF.
+             03 TITRFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TITRFLDI  PIC X(41).
+           02  DATEFLDL    COMP  PIC  S9(4).
+           02  DATEFLDF    PICTURE X.
+           02  FILLER REDEFINES DATEFLDF.
+             03 DATEFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  DATEFLDI  PIC X(10).
+           02  TIMEFLDL    COMP  PIC  S9(4).
+           02  TIMEFLDF    PICTURE X.
+           02  FILLER REDEFINES TIMEFLDF.
+             03 TIMEFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TIMEFLDI  PIC X(8).
+           02  CREFLDL    COMP  PIC  S9(4).
+           02  CREFLDF    PICTURE X.
+           02  FILLER REDEFINES CREFLDF.
+             03 CREFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CREFLDI  PIC X(46).
+           02  CONFLDL    COMP  PIC  S9(4).
+           02  CONFLDF    PICTURE X.
+           02  FILLER REDEFINES CONFLDF.
+             03 CONFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CONFLDI  PIC X(42).
+           02  SUPFLDL    COMP  PIC  S9(4).
+           02  SUPFLDF    PICTURE X.
+           02  FILLER REDEFINES SUPFLDF.
+             03 SUPFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  SUPFLDI  PIC X(43).
+           02  MODFLDL    COMP  PIC  S9(4).
+           02  MODFLDF    PICTURE X.
+           02  FILLER REDEFINES MODFLDF.
+             03 MODFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  MODFLDI  PIC X(42).
+           02  LSTFLDL    COMP  PIC  S9(4).
+           02  LSTFLDF    PICTURE X.
+           02  FILLER REDEFINES LSTFLDF.
+             03 LSTFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  LSTFLDI  PIC X(48).
+           02  CHOICEL    COMP  PIC  S9(4).
+           02  CHOICEF    PICTURE X.
+           02  FILLER REDEFINES CHOICEF.
+             03 CHOICEA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CHOICEI  PIC X(1).
+           02  MSGFLDL    COMP  PIC  S9(4).
+           02  MSGFLDF    PICTURE X.
+           02  FILLER REDEFINES MSGFLDF.
+             03 MSGFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  MSGFLDI  PIC X(79).
+       01  MAP01O REDEFINES MAP01I.
+           02  FILLER PIC X(12).
+           02  FILLER PICTURE X(3).
+           02  TRANSACC    PICTURE X.
+           02  TRANSACP    PICTURE X.
+           02  TRANSACH    PICTURE X.
+           02  TRANSACV    PICTURE X.
+           02  TRANSACO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  TITRFLDC    PICTURE X.
+           02  TITRFLDP    PICTURE X.
+           02  TITRFLDH    PICTURE X.
+           02  TITRFLDV    PICTURE X.
+           02  TITRFLDO  PIC X(41).
+           02  FILLER PICTURE X(3).
+           02  DATEFLDC    PICTURE X.
+           02  DATEFLDP    PICTURE X.
+           02  DATEFLDH    PICTURE X.
+           02  DATEFLDV    PICTURE X.
+           02  DATEFLDO  PIC X(10).
+           02  FILLER PICTURE X(3).
+           02  TIMEFLDC    PICTURE X.
+           02  TIMEFLDP    PICTURE X.
+           02  TIMEFLDH    PICTURE X.
+           02  TIMEFLDV    PICTURE X.
+           02  TIMEFLDO  PIC X(8).
+           02  FILLER PICTURE X(3).
+           02  CREFLDC    PICTURE X.
+           02  CREFLDP    PICTURE X.
+           02  CREFLDH    PICTURE X.
+           02  CREFLDV    PICTURE X.
+           02  CREFLDO  PIC X(46).
+           02  FILLER PICTURE X(3).
+           02  CONFLDC    PICTURE X.
+           02  CONFLDP    PICTURE X.
+           02  CONFLDH    PICTURE X.
+           02  CONFLDV    PICTURE X.
+           02  CONFLDO  PIC X(42).
+           02  FILLER PICTURE X(3).
+           02  SUPFLDC    PICTURE X.
+           02  SUPFLDP    PICTURE X.
+           02  SUPFLDH    PICTURE X.
+           02  SUPFLDV    PICTURE X.
+           02  SUPFLDO  PIC X(43).
+           02  FILLER PICTURE X(3).
+           02  MODFLDC    PICTURE X.
+           02  MODFLDP    PICTURE X.
+           02  MODFLDH    PICTURE X.
+           02  MODFLDV    PICTURE X.
+           02  MODFLDO  PIC X(42).
+           02  FILLER PICTURE X(3).
+           02  LSTFLDC    PICTURE X.
+           02  LSTFLDP    PICTURE X.
+           02  LSTFLDH    PICTURE X.
+           02  LSTFLDV    PICTURE X.
+           02  LSTFLDO  PIC X(48).
+           02  FILLER PICTURE X(3).
+           02  CHOICEC    PICTURE X.
+           02  CHOICEP    PICTURE X.
+           02  CHOICEH    PICTURE X.
+           02  CHOICEV    PICTURE X.
+           02  CHOICEO  PIC X(1).
+           02  FILLER PICTURE X(3).
+           02  MSGFLDC    PICTURE X.
+           02  MSGFLDP    PICTURE X.
+           02  MSGFLDH    PICTURE X.
+           02  MSGFLDV    PICTURE X.
+           02  MSGFLDO  PIC X(79).

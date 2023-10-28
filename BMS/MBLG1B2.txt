@@ -1,0 +1,78 @@
+**********************************************************************
+*       MAP MBLG1B2 - CREATION ET MODIFICATION D'UNE CHANSON         *
+**********************************************************************
+        PRINT NOGEN
+MBLG1B2 DFHMSD TYPE=&SYSPARM,MODE=INOUT,LANG=COBOL,                    X
+               CTRL=(FREEKB,FRSET),STORAGE=AUTO,TIOAPFX=YES,EXTATT=YES
+* DECLARATION DE LA TAILLE DE L'ECRAN
+MAP01   DFHMDI COLUMN=1,LINE=1,SIZE=(24,80)
+*= ZONE 1 ===========================================================*
+TRANSAC DFHMDF POS=(01,01),LENGTH=04,                                  X
+               ATTRB=ASKIP
+* TITRE ECRAN
+TITRFLD DFHMDF POS=(01,19),LENGTH=41,                                  X
+               ATTRB=ASKIP,HILIGHT=UNDERLINE
+        DFHMDF POS=(01,61),LENGTH=01,                                  X
+               ATTRB=ASKIP
+* DATE
+DATEFLD DFHMDF POS=(01,70),LENGTH=10,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='10/10/2006'
+* HEURE
+TIMEFLD DFHMDF POS=(02,71),LENGTH=08,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='88:88:88'
+*= ZONE 2 ===========================================================*
+* CHAMP AFFICHAGE MESSAGE INDICATIF
+FIELD1  DFHMDF POS=(05,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE
+FIELD2  DFHMDF POS=(06,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE
+FIELD3  DFHMDF POS=(07,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE
+*======CODEC======
+        DFHMDF POS=(10,19),LENGTH=15,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='CODE CHANSON  :'
+* CHAMP DE SAISIE
+CODEC   DFHMDF POS=(10,35),LENGTH=04,                                  X
+               ATTRB=(UNPROT,IC,FSET),HILIGHT=UNDERLINE
+* CHAMP DE BLOCAGE (SKIPPER)
+        DFHMDF POS=(10,40),ATTRB=ASKIP,LENGTH=1
+*======TITREC======
+        DFHMDF POS=(12,19),LENGTH=15,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='TITRE CHANSON :'
+TITREC  DFHMDF POS=(12,35),LENGTH=40,                                  X
+               ATTRB=(UNPROT,FSET),HILIGHT=UNDERLINE
+* CHAMP DE BLOCAGE
+        DFHMDF POS=(12,76),ATTRB=ASKIP,LENGTH=1
+*======CODEA======
+        DFHMDF POS=(14,19),LENGTH=15,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='CODE ALBUM    :'
+CODEA   DFHMDF POS=(14,35),LENGTH=04,                                  X
+               ATTRB=(UNPROT,FSET),HILIGHT=UNDERLINE
+* CHAMP DE BLOCAGE
+        DFHMDF POS=(14,40),ATTRB=ASKIP,LENGTH=1
+*= ZONE 3 ============================================================*
+* CHAMP AFFICHAGE MESSAGE ET ERREUR
+MSGFLD  DFHMDF POS=(22,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,COLOR=YELLOW,                               X
+               INITIAL='                                        '
+* CHAMP D AIDE A LA NAVIGATION
+        DFHMDF POS=(23,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='------------------------------------------------
+               --------------------------------'
+        DFHMDF POS=(24,01),LENGTH=10,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='PF12 - FIN'
+        DFHMDF POS=(24,31),LENGTH=12,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='PF3 - RETOUR'
+        DFHMDF POS=(24,62),LENGTH=18,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='ENTER - VALIDATION'
+        DFHMSD TYPE=FINAL
+        END

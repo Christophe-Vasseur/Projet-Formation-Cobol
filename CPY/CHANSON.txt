@@ -1,0 +1,13 @@
+      *----------------------------------------------------------*
+      *    DESCRIPTION DE L'ENREGISTREMENT DU FICHIER CHANSON    *
+      *     (FICHIER VSAM KSDS: LONG ENGT = 80 (LONG CLE = 4)    *
+      *----------------------------------------------------------*
+       01  E-CHANSON.
+      *-------------------------------------- CODE CHANSON
+           05 CH-CODEC             PIC X(04).
+      *-------------------------------------- CODE ALBUM
+           05 CH-CODEA             PIC X(04).
+      *-------------------------------------- TITRE CHANSON
+           05 CH-TITREC            PIC X(40).
+      *-------------------------------------- FILLER
+           05 FILLER               PIC X(32).

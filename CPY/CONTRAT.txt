@@ -1,0 +1,72 @@
+       77 F-CONTRAT PIC X(08) VALUE 'CONTRAG1'.
+
+       01 E-CONTRAT.
+           05 E-CO-KEY.
+      *---------------------------------------- CODE ALBUM
+               10 E-CO-CODEA PIC X(04).
+      *---------------------------------------- CODE PERSONNE
+               10 E-CO-CODEP PIC X(04).
+      *---------------------------------------- SIREN
+               10 E-CO-SIREN PIC X(05).
+      *---------------------------------------- FONCTION
+               10 E-CO-FONCTION  PIC X(01).
+      *---------------------------------------- DROITS EN %
+           05 E-CO-DROITS    PIC S9(03)V9(02) COMP-3.
+      *---------------------------------------- DATE DE SIGNATURE
+           05 E-CO-DATE-SIGN PIC X(10).
+      *---------------------------------------- FILLER
+           05 FILLER         PIC X(53).
+
+       01 O-CONTRAT.
+           05 O-CO-KEY.
+      *---------------------------------------- CODE ALBUM
+               10 O-CO-CODEA PIC X(04).
+               10 FILLER     PIC X(01) VALUE SPACE.
+      *---------------------------------------- CODE PERSONNE
+               10 O-CO-CODEP PIC X(04).
+               10 FILLER     PIC X(01) VALUE SPACE.
+      *---------------------------------------- SIREN
+               10 O-CO-SIREN PIC X(05).
+               10 FILLER     PIC X(01) VALUE SPACE.
+      *---------------------------------------- FONCTION
+               10 O-CO-FONCTION  PIC X(01).
+               10 FILLER     PIC X(01) VALUE SPACE.
+      *---------------------------------------- DROITS EN %
+           05 O-CO-DROITS    PIC S9(03)V9(02) COMP-3.
+           05 FILLER     PIC X(01) VALUE SPACE.
+      *---------------------------------------- DATE DE SIGNATURE
+           05 O-CO-DATE-SIGN PIC X(10).
+      *---------------------------------------- FILLER
+           05 FILLER         PIC X(48).
+
+       01 W-CONTRAT.
+      *---------------------------------------- CODE ALBUM
+           05 W-CO-CODEA     PIC X(04).
+      *---------------------------------------- CODE PERSONNE
+           05 W-CO-CODEP     PIC X(04).
+      *---------------------------------------- SIREN
+           05 W-CO-SIREN     PIC X(05).
+      *---------------------------------------- FONCTION
+           05 W-CO-FONCTION  PIC X(01).
+      *---------------------------------------- DROITS EN %
+           05 W-CO-DROITS    PIC S9(03)V9(02) COMP-3.
+      *---------------------------------------- DATE DE SIGNATURE
+           05 W-CO-DATE-SIGN PIC X(10).
+      *---------------------------------------- FILLER
+           05 FILLER         PIC X(53).
+      *---------------------------------------- CODE RETOUR
+           05 W-CO-RC        PIC 9(02).
+               88 W-CO-RC-NORMAL  VALUE 0.
+               88 W-CO-RC-NOTOPEN VALUE 1.
+               88 W-CO-RC-NOTFND  VALUE 2.
+               88 W-CO-RC-DUPREC  VALUE 3.
+               88 W-CO-RC-OTHER   VALUE 4.
+      *---------------------------------------- CODES RETOUR CICS
+      *                                         2 * 4 OCTETS
+           05 W-CO-RC-CICS.
+               10 W-CO-RC-CICS-1 PIC S9(08) COMP.
+                   88 CICS-RESP-NORMAL  VALUE 0.
+                   88 CICS-RESP-NOTFND  VALUE 13.
+                   88 CICS-RESP-NOTOPEN VALUE 19.
+                   88 CICS-RESP-ENDFILE VALUE 20.
+               10 W-CO-RC-CICS-2 PIC S9(08) COMP.

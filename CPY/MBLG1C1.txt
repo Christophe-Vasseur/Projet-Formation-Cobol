@@ -1,0 +1,112 @@
+       01  MAP01I.
+           02  FILLER PIC X(12).
+           02  TRANSACL    COMP  PIC  S9(4).
+           02  TRANSACF    PICTURE X.
+           02  FILLER REDEFINES TRANSACF.
+             03 TRANSACA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TRANSACI  PIC X(4).
+           02  TITRFLDL    COMP  PIC  S9(4).
+           02  TITRFLDF    PICTURE X.
+           02  FILLER REDEFINES TITRFLDF.
+             03 TITRFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TITRFLDI  PIC X(41).
+           02  DATEFLDL    COMP  PIC  S9(4).
+           02  DATEFLDF    PICTURE X.
+           02  FILLER REDEFINES DATEFLDF.
+             03 DATEFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  DATEFLDI  PIC X(10).
+           02  TIMEFLDL    COMP  PIC  S9(4).
+           02  TIMEFLDF    PICTURE X.
+           02  FILLER REDEFINES TIMEFLDF.
+             03 TIMEFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TIMEFLDI  PIC X(8).
+           02  ACTFLDL    COMP  PIC  S9(4).
+           02  ACTFLDF    PICTURE X.
+           02  FILLER REDEFINES ACTFLDF.
+             03 ACTFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  ACTFLDI  PIC X(47).
+           02  CODEPL    COMP  PIC  S9(4).
+           02  CODEPF    PICTURE X.
+           02  FILLER REDEFINES CODEPF.
+             03 CODEPA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CODEPI  PIC X(4).
+           02  CODETL    COMP  PIC  S9(4).
+           02  CODETF    PICTURE X.
+           02  FILLER REDEFINES CODETF.
+             03 CODETA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CODETI  PIC X(1).
+           02  IDENTL    COMP  PIC  S9(4).
+           02  IDENTF    PICTURE X.
+           02  FILLER REDEFINES IDENTF.
+             03 IDENTA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  IDENTI  PIC X(25).
+           02  MSGFLDL    COMP  PIC  S9(4).
+           02  MSGFLDF    PICTURE X.
+           02  FILLER REDEFINES MSGFLDF.
+             03 MSGFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  MSGFLDI  PIC X(79).
+       01  MAP01O REDEFINES MAP01I.
+           02  FILLER PIC X(12).
+           02  FILLER PICTURE X(3).
+           02  TRANSACC    PICTURE X.
+           02  TRANSACP    PICTURE X.
+           02  TRANSACH    PICTURE X.
+           02  TRANSACV    PICTURE X.
+           02  TRANSACO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  TITRFLDC    PICTURE X.
+           02  TITRFLDP    PICTURE X.
+           02  TITRFLDH    PICTURE X.
+           02  TITRFLDV    PICTURE X.
+           02  TITRFLDO  PIC X(41).
+           02  FILLER PICTURE X(3).
+           02  DATEFLDC    PICTURE X.
+           02  DATEFLDP    PICTURE X.
+           02  DATEFLDH    PICTURE X.
+           02  DATEFLDV    PICTURE X.
+           02  DATEFLDO  PIC X(10).
+           02  FILLER PICTURE X(3).
+           02  TIMEFLDC    PICTURE X.
+           02  TIMEFLDP    PICTURE X.
+           02  TIMEFLDH    PICTURE X.
+           02  TIMEFLDV    PICTURE X.
+           02  TIMEFLDO  PIC X(8).
+           02  FILLER PICTURE X(3).
+           02  ACTFLDC    PICTURE X.
+           02  ACTFLDP    PICTURE X.
+           02  ACTFLDH    PICTURE X.
+           02  ACTFLDV    PICTURE X.
+           02  ACTFLDO  PIC X(47).
+           02  FILLER PICTURE X(3).
+           02  CODEPC    PICTURE X.
+           02  CODEPP    PICTURE X.
+           02  CODEPH    PICTURE X.
+           02  CODEPV    PICTURE X.
+           02  CODEPO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  CODETC    PICTURE X.
+           02  CODETP    PICTURE X.
+           02  CODETH    PICTURE X.
+           02  CODETV    PICTURE X.
+           02  CODETO  PIC X(1).
+           02  FILLER PICTURE X(3).
+           02  IDENTC    PICTURE X.
+           02  IDENTP    PICTURE X.
+           02  IDENTH    PICTURE X.
+           02  IDENTV    PICTURE X.
+           02  IDENTO  PIC X(25).
+           02  FILLER PICTURE X(3).
+           02  MSGFLDC    PICTURE X.
+           02  MSGFLDP    PICTURE X.
+           02  MSGFLDH    PICTURE X.
+           02  MSGFLDV    PICTURE X.
+           02  MSGFLDO  PIC X(79).

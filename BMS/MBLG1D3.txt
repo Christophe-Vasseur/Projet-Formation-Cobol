@@ -1,0 +1,77 @@
+**********************************************************************
+*       MAP MBLG1D3 - CREATION/MODIFICATION DES CONTRATS             *
+**********************************************************************
+        PRINT  NOGEN
+MBLG1D3 DFHMSD TYPE=&SYSPARM,MODE=INOUT,LANG=COBOL,                    X
+               CTRL=(FREEKB,FRSET),STORAGE=AUTO,TIOAPFX=YES,EXTATT=YES
+* DECLARATION DE LA TAILLE DE L'ECRAN
+MAP01   DFHMDI COLUMN=1,LINE=1,SIZE=(24,80)
+*= ZONE 1 ===========================================================*
+TRANSAC DFHMDF POS=(01,01),LENGTH=04,                                  X
+               ATTRB=ASKIP
+* TITRE ECRAN
+        DFHMDF POS=(01,19),LENGTH=41,                                  X
+               ATTRB=ASKIP,HILIGHT=UNDERLINE,                          X
+               INITIAL='LISTE DES CONTRATS'
+        DFHMDF POS=(01,61),LENGTH=01,                                  X
+               ATTRB=ASKIP
+* DATE
+DATEFLD DFHMDF POS=(01,70),LENGTH=10,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='10/10/2006'
+* HEURE
+TIMEFLD DFHMDF POS=(02,71),LENGTH=08,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='88:88:88'
+*= ZONE 2 ===========================================================*
+ITEM01  DFHMDF POS=(06,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM02  DFHMDF POS=(07,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM03  DFHMDF POS=(08,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM04  DFHMDF POS=(09,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM05  DFHMDF POS=(10,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM06  DFHMDF POS=(11,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM07  DFHMDF POS=(12,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM08  DFHMDF POS=(13,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM09  DFHMDF POS=(14,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM10  DFHMDF POS=(15,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM11  DFHMDF POS=(16,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM12  DFHMDF POS=(17,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM13  DFHMDF POS=(18,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM14  DFHMDF POS=(19,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+ITEM15  DFHMDF POS=(20,10),LENGTH=69,                                  X
+               ATTRB=PROT,COLOR=TURQUOISE
+*=ZONE 3 =============================================================
+* CHAMP AFFICHAGE MESSAGE ET ERREUR
+MSGFLD  DFHMDF POS=(22,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,COLOR=YELLOW,                               X
+               INITIAL='                                        '
+* CHAMP D AIDE A LA NAVIGATION
+        DFHMDF POS=(23,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='------------------------------------------------
+               --------------------------------'
+        DFHMDF POS=(24,01),LENGTH=10,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='PF12 - FIN'
+        DFHMDF POS=(24,31),LENGTH=12,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='PF3 - RETOUR'
+        DFHMDF POS=(24,62),LENGTH=18,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='ENTER - VALIDATION'
+        DFHMSD TYPE=FINAL
+        END

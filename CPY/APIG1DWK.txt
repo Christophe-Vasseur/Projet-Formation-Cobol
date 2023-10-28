@@ -1,0 +1,50 @@
+      * DIVERS
+
+       77 PREFIX     PIC X(08) VALUE 'APIG1D  '.
+       77 DEST-PGM   PIC X(08).
+       77 RC-1       PIC S9(08) COMP.
+       77 DATE-TMP   PIC S9(15) COMP-3.
+       77 RC-MAPFAIL PIC S9(08) COMP.
+       01 SCROLL     PIC X(01) VALUE 'N'.
+           88 SCROLL-UP   VALUE 'U'.
+           88 SCROLL-DOWN VALUE 'D'.
+           88 NO-SCROLL   VALUE 'N'.
+
+      * MESSAGES
+
+       77 GOODBYE        PIC X(18) VALUE 'FIN DE TRANSACTION'.
+       77 ERR-FILE-EMPTY PIC X(18) VALUE 'FICHIER VIDE'.
+       77 ERR-NOPF3      PIC X(79) VALUE 'DEJA A LA RACINE'.
+       77 ERR-BAD-CHOICE PIC X(79) VALUE 'MAUVAIS CHOIX'.
+       77 ERR-NO-CHOICE  PIC X(79) VALUE 'VEUILLEZ FAIRE UN CHOIX'.
+       77 ERR-NOT-AVAIL  PIC X(79) VALUE 'CHOIX INDISPONIBLE'.
+       77 ERR-FST-PAGE   PIC X(79) VALUE 'DEJA LA PREMIERE PAGE'.
+       77 ERR-LST-PAGE   PIC X(79) VALUE 'DEJA LA DERNIERE PAGE'.
+       77 ERR-UNKNOWN    PIC X(79) VALUE 'ERREUR INCONNUE - CONTACTEZ LE
+      -    ' SUPPORT'.
+
+      * COMM AREA
+
+       01 WK-COMM-AREA.
+      *    BROWSING (16)
+           02 PREV-PGM PIC X(08).
+           02 NEXT-PGM PIC X(08).
+      *    USER PROGRESS (03)
+           02 CHOICE-1 PIC 9(01).
+               88 ALBUMS    VALUE 1.
+               88 CHANSONS  VALUE 2.
+               88 PERSONNES VALUE 3.
+               88 CONTRATS  VALUE 4.
+               88 VENTES    VALUE 5.
+               88 MAISON-DI VALUE 6.
+           02 CHOICE-2      PIC 9(01).
+           02 FLAG-MODIF    PIC 9(01).
+      *    PAGE SCROLL (43)
+           02 LST-KEY       PIC X(20).
+           02 FST-KEY       PIC X(20).
+           02 PAGE-NUM      PIC 9(02).
+           02 NEXT-PAGE-IND PIC 9(01).
+               88 NEXT-PAGE-EXISTS     VALUE 1.
+               88 NOT-NEXT-PAGE-EXISTS VALUE 2.
+      *    FILLER (1024 - 62)
+           02 FILLER        PIC X(962).

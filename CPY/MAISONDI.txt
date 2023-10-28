@@ -1,0 +1,16 @@
+      *----------------------------------------------------------*
+      *    DESCRIPTION DE L'ENREGISTREMENT DU FICHIER MAISONDI   *
+      *     (FICHIER VSAM KSDS: LONG ENGT = 400 (LONG CLE = 4)   *
+      *----------------------------------------------------------*
+
+       01  E-MAISON-DIST.
+      *--------------------------------------  SIREN
+           05 MA-SIREN           PIC X(05).
+      *--------------------------------------  RAISON SOCIALE
+           05 MA-RAISON-SOC      PIC X(30).
+      *--------------------------------------  ADRESSE MAISON DISQUE
+           05 MA-ADRESSE         PIC X(15).
+      *--------------------------------------  CODE PERSONNE DIRECTEUR
+           05 MA-CODEP-DIR       PIC X(04).
+      *--------------------------------------  FILLER
+           05 FILLER             PIC X(26).

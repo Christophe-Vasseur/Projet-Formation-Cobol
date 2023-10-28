@@ -1,0 +1,145 @@
+
+      * POINT D ENTREE DE LA
+      * GESTION DE LA NAVIGATION
+      * BRWS = BROWSE = NAVIGUER
+
+       P-BRWS-MAIN.
+           INITIALIZE RC-1
+      *    INITIALISATION DE LA MAP
+           EVALUATE MAP
+               WHEN 1     MOVE LOW-VALUE TO MAP01O
+               WHEN 2     MOVE LOW-VALUE TO MAP02O
+               WHEN OTHER MOVE LOW-VALUE TO MAP01O
+           END-EVALUATE
+      *    INITIALISATION DE LA COMM AREA
+           IF EIBCALEN = 0 THEN
+               MOVE SPACES TO WK-COMM-AREA
+           ELSE
+               MOVE LK-COMM-AREA TO WK-COMM-AREA
+           END-IF
+      *    SI ON VIENT D UN AUTRE ECRAN
+           IF PGM-NAME NOT = PREV-PGM THEN
+               PERFORM P-ON-INIT
+               PERFORM P-BRWS-ON-LAND
+      *    SI ON VIENT DE L ECRAN COURANT
+           ELSE
+      *        EN FONCTION DE LA TOUCHE ENFONCEE
+      *        OU SI UNE ERREUR SE PRODUIT
+               EVALUATE TRUE
+                   WHEN EIBAID = DFHPF3
+                       PERFORM P-BRWS-ON-PF3
+                   WHEN EIBAID = DFHPF12 OR DFHPF2
+                       PERFORM P-BRWS-ON-PF12
+                   WHEN EIBAID = DFHPF7
+                       PERFORM P-ON-INIT
+                       PERFORM P-BRWS-ON-PF7
+                   WHEN EIBAID = DFHPF8
+                       PERFORM P-ON-INIT
+                       PERFORM P-BRWS-ON-PF8
+                   WHEN EIBAID = DFHENTER
+      *                RECEPTION DES SAISIES UTILISATEUR
+                       PERFORM P-CICS-RECV
+                       PERFORM P-ON-INIT
+                       IF RC-1 = RC-MAPFAIL THEN
+                           PERFORM P-BRWS-ON-FAIL
+                       ELSE
+                           PERFORM P-BRWS-ON-ENTER
+                       END-IF
+                   WHEN OTHER
+                       PERFORM P-ON-INIT
+                       PERFORM P-BRWS-SEND
+               END-EVALUATE
+           END-IF
+           .
+
+      * PARAGRAPHE EXECUTE QUAND
+      * UNE ERREUR MAPFAIL SE PRODUIT
+
+       P-BRWS-ON-FAIL.
+           MOVE ERR-UNKNOWN TO MSGFLDO
+           PERFORM P-BRWS-SEND
+           .
+
+      * PARAGRAPHE EXECUTE QUAND
+      * L UTILISATEUR SOUMET
+      * SES SAISIES CLAVIER
+
+       P-BRWS-ON-ENTER.
+           PERFORM P-ON-SUBMIT
+           IF DEST-PGM = PGM-NAME THEN
+               PERFORM P-BRWS-SEND
+           ELSE
+               PERFORM P-ON-LEAVE
+               MOVE DEST-PGM TO NEXT-PGM
+               PERFORM P-CICS-XCTL
+               GOBACK
+           END-IF
+           .
+
+      * PARAGRAPHE EXECUTE QUAND
+      * L UTILISATEUR RETOURNE
+      * A L ECRAN PRECEDENT
+
+       P-BRWS-ON-PF3.
+           IF PF3-PGM = SPACES THEN
+               MOVE ERR-NOPF3 TO MSGFLDO
+               PERFORM P-BRWS-SEND
+           ELSE
+               PERFORM P-ON-LEAVE
+               MOVE PF3-PGM TO NEXT-PGM
+               PERFORM P-CICS-XCTL
+               GOBACK
+           END-IF
+           .
+
+      * PARAGRAPHE EXECUTE QUAND
+      * L UTILISATEUR DEMANDE
+      * LA PAGE PRECEDENTE
+
+       P-BRWS-ON-PF7.
+           SET SCROLL-UP TO TRUE
+           PERFORM P-BRWS-SEND
+           .
+
+      * PARAGRAPHE EXECUTE QUAND
+      * L UTILISATEUR DEMANDE
+      * LA PAGE SUIVANTE
+
+       P-BRWS-ON-PF8.
+           SET SCROLL-DOWN TO TRUE
+           PERFORM P-BRWS-SEND
+           .
+
+      * PARAGRAPHE EXECUTE QUAND
+      * L UTILISATEUR QUITTE
+      * L APPLICATION
+
+       P-BRWS-ON-PF12.
+           PERFORM P-CICS-BBYE
+           PERFORM P-CICS-QUIT
+           .
+
+      * PARAGRAPHE EXECUTE QUAND
+      * L ECRAN COURANT N EST PAS
+      * L ECRAN PRECEDENT
+
+       P-BRWS-ON-LAND.
+           MOVE TRANS-ID TO TRANSACO
+           PERFORM P-ON-LAND
+           PERFORM P-ON-DISPLAY
+           PERFORM P-CICS-TIME
+           PERFORM P-CICS-SEND
+           MOVE PGM-NAME TO PREV-PGM
+           PERFORM P-CICS-WAIT
+           .
+
+      * PARAGRAPHE EXECUTE POUR
+      * RAFRAICHIR L ECRAN COURANT
+
+       P-BRWS-SEND.
+           MOVE TRANS-ID TO TRANSACO
+           PERFORM P-ON-DISPLAY
+           PERFORM P-CICS-TIME
+           PERFORM P-CICS-SEND
+           PERFORM P-CICS-WAIT
+           .

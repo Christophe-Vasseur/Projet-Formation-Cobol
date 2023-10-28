@@ -1,0 +1,11 @@
+      *----------------------------------------------------------*
+      *    DESCRIPTION DE L'ENREGISTREMENT DU FICHIER ALBUM      *
+      *     (FICHIER VSAM KSDS: LONG ENGT = 80  (LONG CLE = 4)   *
+      *----------------------------------------------------------*
+       01  E-ALBUM.
+      *-------------------------------------- CODE ALBUM
+           05 AL-CODEA             PIC X(04).
+      *-------------------------------------- TITRE ALBUM
+           05 AL-TITREA            PIC X(30).
+      *-------------------------------------- FILLER
+           05 FILLER               PIC X(46).

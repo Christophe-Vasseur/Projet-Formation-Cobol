@@ -1,0 +1,50 @@
+      *----------------------------------------------------------*
+      *    DESCRIPTION DE L'ENREGISTREMENT DU FICHIER VENTES     *
+      *     (FICHIER VSAM KSDS: LONG ENGT = 400 (LONG CLE = 4)   *
+      *----------------------------------------------------------*
+
+       01  E-VENTES.
+            05 E-VE-KEY.
+      *---------------------------------------- CODE ALBUM
+                10 VE-CODEA          PIC X(04).
+      *---------------------------------------- CODE MAISON DISTRIBUTION
+                10 VE-SIREN          PIC X(05).
+      *---------------------------------------- DATE VENTE
+                10 VE-DATE-VENTE     PIC X(10).
+      *---------------------------------------- PRIX ALBUM
+      *     05 VE-PRIX               PIC S9(06)V9(02).
+            05 VE-PRIX               PIC X(08).
+      *---------------------------------------- QUANTITE VENDUE
+      *     05 VE-QTE                PIC S9(04) COMP.
+            05 VE-QTE                PIC X(04).
+      *---------------------------------------- FILLER
+            05 FILLER                PIC X(49).
+
+       01 W-VENTES.
+            05 W-VE-KEY.
+      *---------------------------------------- CODE ALBUM
+                10 W-VE-CODEA        PIC X(04).
+      *---------------------------------------- CODE MAISON DISTRIBUTION
+                10 W-VE-SIREN        PIC X(05).
+      *---------------------------------------- DATE VENTE
+                10 W-VE-DATE-VENTE   PIC X(10).
+      *---------------------------------------- PRIX ALBUM
+      *     05 VE-PRIX               PIC S9(06)V9(02).
+            05 W-VE-PRIX             PIC X(08).
+      *---------------------------------------- QUANTITE VENDUE
+      *     05 VE-QTE                PIC S9(04) COMP.
+            05 W-VE-QTE              PIC X(04).
+      *---------------------------------------- FILLER
+            05 FILLER                PIC X(49).
+      *---------------------------------------- CODE RETOUR
+            05 W-VE-RC        PIC 9(02).
+               88 W-VE-RC-NORMAL  VALUE 0.
+               88 W-VE-RC-NOTOPEN VALUE 1.
+               88 W-VE-RC-NOTFND  VALUE 2.
+               88 W-VE-RC-DUPREC  VALUE 3.
+               88 W-VE-RC-OTHER   VALUE 4.
+      *---------------------------------------- CODES RETOUR CICS
+      *                                         2 * 4 OCTETS
+            05 W-VE-RC-CICS.
+               10 W-VE-RC-CICS-1 PIC S9(08) COMP.
+               10 W-VE-RC-CICS-2 PIC S9(08) COMP.

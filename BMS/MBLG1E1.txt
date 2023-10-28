@@ -1,0 +1,97 @@
+**********************************************************************
+*       MAP MBLG1E1 - CONSULTATION/SUPPRESION VENTES                 *
+**********************************************************************
+        PRINT NOGEN
+MBLG1E1 DFHMSD TYPE=&SYSPARM,MODE=INOUT,LANG=COBOL,                    X
+               CTRL=(FREEKB,FRSET),STORAGE=AUTO,TIOAPFX=YES,EXTATT=YES
+* DECLARATION DE LA TAILLE DE L'ECRAN
+MAP01   DFHMDI COLUMN=1,LINE=1,SIZE=(24,80)
+*= ZONE 1 ===========================================================*
+TRANSAC DFHMDF POS=(01,01),LENGTH=04,                                  X
+               ATTRB=ASKIP
+* TITRE ECRAN
+TITRFLD DFHMDF POS=(01,19),LENGTH=41,                                  X
+               ATTRB=ASKIP,HILIGHT=UNDERLINE
+        DFHMDF POS=(01,61),LENGTH=01,                                  X
+               ATTRB=ASKIP
+* DATE
+DATEFLD DFHMDF POS=(01,70),LENGTH=10,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='10/10/2006'
+* HEURE
+TIMEFLD DFHMDF POS=(02,71),LENGTH=08,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='88:88:88'
+*= ZONE 2 ===========================================================*
+* INVITATION A LA SAISIE
+        DFHMDF POS=(06,01),LENGTH=52,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='SAISIR LE CODE D''UN ALBUM POUR ACCEDER A SES VX
+               ENTES'
+* 1E LIGNE DU FORMULAIRE
+        DFHMDF POS=(10,19),LENGTH=17,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='CODE ALBUM      :'
+*======CODEA======
+CODEA   DFHMDF POS=(10,37),LENGTH=04,                                  X
+               ATTRB=(UNPROT,IC,FSET),HILIGHT=UNDERLINE
+* CHAMP DE BLOCAGE (STOPEUR)
+        DFHMDF POS=(10,42),LENGTH=01,                                  X
+               ATTRB=PROT
+*======DATVNT======
+        DFHMDF POS=(12,19),LENGTH=17,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='DATE DE VENTE   :'
+DATVNT  DFHMDF POS=(12,37),LENGTH=10,                                  X
+               ATTRB=ASKIP
+* CHAMP DE BLOCAGE
+        DFHMDF POS=(12,48),LENGTH=01,                                  X
+               ATTRB=ASKIP
+*======CSIREN======
+        DFHMDF POS=(14,19),LENGTH=17,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='CODE SIREN      :'
+SIREN   DFHMDF POS=(14,37),LENGTH=05,                                  X
+               ATTRB=ASKIP
+* CHAMP DE BLOCAGE
+        DFHMDF POS=(14,43),LENGTH=01,                                  X
+               ATTRB=ASKIP
+* 4E LIGNE DU FORMULAIRE
+        DFHMDF POS=(16,19),LENGTH=17,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='QUANTITE VENDUE :'
+QTEVNT  DFHMDF POS=(16,37),LENGTH=04,                                  X
+               ATTRB=ASKIP
+* CHAMP DE BLOCAGE
+        DFHMDF POS=(16,42),LENGTH=01,                                  X
+               ATTRB=ASKIP
+* 5E LIGNE DU FORMULAIRE
+        DFHMDF POS=(18,19),LENGTH=17,                                  X
+               ATTRB=ASKIP,COLOR=TURQUOISE,                            X
+               INITIAL='PRIX DE VENTE   :'
+PRIXVNT DFHMDF POS=(18,37),LENGTH=09,                                  X
+               ATTRB=ASKIP
+* CHAMP DE BLOCAGE
+        DFHMDF POS=(18,47),LENGTH=01,                                  X
+               ATTRB=ASKIP
+*=ZONE 3 =============================================================
+* CHAMP AFFICHAGE MESSAGE ET ERREUR
+MSGFLD  DFHMDF POS=(22,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,COLOR=YELLOW,                               X
+               INITIAL='                                        '
+* CHAMP D AIDE A LA NAVIGATION
+        DFHMDF POS=(23,01),LENGTH=79,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='------------------------------------------------
+               --------------------------------'
+        DFHMDF POS=(24,01),LENGTH=10,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='PF12 - FIN'
+        DFHMDF POS=(24,31),LENGTH=12,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='PF3 - RETOUR'
+        DFHMDF POS=(24,62),LENGTH=18,                                  X
+               ATTRB=ASKIP,                                            X
+               INITIAL='ENTER - VALIDATION'
+        DFHMSD TYPE=FINAL
+        END

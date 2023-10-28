@@ -1,0 +1,136 @@
+       01  MAP01I.
+           02  FILLER PIC X(12).
+           02  TRANSACL    COMP  PIC  S9(4).
+           02  TRANSACF    PICTURE X.
+           02  FILLER REDEFINES TRANSACF.
+             03 TRANSACA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TRANSACI  PIC X(4).
+           02  TITRFLDL    COMP  PIC  S9(4).
+           02  TITRFLDF    PICTURE X.
+           02  FILLER REDEFINES TITRFLDF.
+             03 TITRFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TITRFLDI  PIC X(41).
+           02  DATEFLDL    COMP  PIC  S9(4).
+           02  DATEFLDF    PICTURE X.
+           02  FILLER REDEFINES DATEFLDF.
+             03 DATEFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  DATEFLDI  PIC X(10).
+           02  TIMEFLDL    COMP  PIC  S9(4).
+           02  TIMEFLDF    PICTURE X.
+           02  FILLER REDEFINES TIMEFLDF.
+             03 TIMEFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TIMEFLDI  PIC X(8).
+           02  FIELD1L    COMP  PIC  S9(4).
+           02  FIELD1F    PICTURE X.
+           02  FILLER REDEFINES FIELD1F.
+             03 FIELD1A    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  FIELD1I  PIC X(79).
+           02  FIELD2L    COMP  PIC  S9(4).
+           02  FIELD2F    PICTURE X.
+           02  FILLER REDEFINES FIELD2F.
+             03 FIELD2A    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  FIELD2I  PIC X(79).
+           02  FIELD3L    COMP  PIC  S9(4).
+           02  FIELD3F    PICTURE X.
+           02  FILLER REDEFINES FIELD3F.
+             03 FIELD3A    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  FIELD3I  PIC X(79).
+           02  CODECL    COMP  PIC  S9(4).
+           02  CODECF    PICTURE X.
+           02  FILLER REDEFINES CODECF.
+             03 CODECA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CODECI  PIC X(4).
+           02  TITRECL    COMP  PIC  S9(4).
+           02  TITRECF    PICTURE X.
+           02  FILLER REDEFINES TITRECF.
+             03 TITRECA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TITRECI  PIC X(40).
+           02  CODEAL    COMP  PIC  S9(4).
+           02  CODEAF    PICTURE X.
+           02  FILLER REDEFINES CODEAF.
+             03 CODEAA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CODEAI  PIC X(4).
+           02  MSGFLDL    COMP  PIC  S9(4).
+           02  MSGFLDF    PICTURE X.
+           02  FILLER REDEFINES MSGFLDF.
+             03 MSGFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  MSGFLDI  PIC X(79).
+       01  MAP01O REDEFINES MAP01I.
+           02  FILLER PIC X(12).
+           02  FILLER PICTURE X(3).
+           02  TRANSACC    PICTURE X.
+           02  TRANSACP    PICTURE X.
+           02  TRANSACH    PICTURE X.
+           02  TRANSACV    PICTURE X.
+           02  TRANSACO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  TITRFLDC    PICTURE X.
+           02  TITRFLDP    PICTURE X.
+           02  TITRFLDH    PICTURE X.
+           02  TITRFLDV    PICTURE X.
+           02  TITRFLDO  PIC X(41).
+           02  FILLER PICTURE X(3).
+           02  DATEFLDC    PICTURE X.
+           02  DATEFLDP    PICTURE X.
+           02  DATEFLDH    PICTURE X.
+           02  DATEFLDV    PICTURE X.
+           02  DATEFLDO  PIC X(10).
+           02  FILLER PICTURE X(3).
+           02  TIMEFLDC    PICTURE X.
+           02  TIMEFLDP    PICTURE X.
+           02  TIMEFLDH    PICTURE X.
+           02  TIMEFLDV    PICTURE X.
+           02  TIMEFLDO  PIC X(8).
+           02  FILLER PICTURE X(3).
+           02  FIELD1C    PICTURE X.
+           02  FIELD1P    PICTURE X.
+           02  FIELD1H    PICTURE X.
+           02  FIELD1V    PICTURE X.
+           02  FIELD1O  PIC X(79).
+           02  FILLER PICTURE X(3).
+           02  FIELD2C    PICTURE X.
+           02  FIELD2P    PICTURE X.
+           02  FIELD2H    PICTURE X.
+           02  FIELD2V    PICTURE X.
+           02  FIELD2O  PIC X(79).
+           02  FILLER PICTURE X(3).
+           02  FIELD3C    PICTURE X.
+           02  FIELD3P    PICTURE X.
+           02  FIELD3H    PICTURE X.
+           02  FIELD3V    PICTURE X.
+           02  FIELD3O  PIC X(79).
+           02  FILLER PICTURE X(3).
+           02  CODECC    PICTURE X.
+           02  CODECP    PICTURE X.
+           02  CODECH    PICTURE X.
+           02  CODECV    PICTURE X.
+           02  CODECO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  TITRECC    PICTURE X.
+           02  TITRECP    PICTURE X.
+           02  TITRECH    PICTURE X.
+           02  TITRECV    PICTURE X.
+           02  TITRECO  PIC X(40).
+           02  FILLER PICTURE X(3).
+           02  CODEAC    PICTURE X.
+           02  CODEAP    PICTURE X.
+           02  CODEAH    PICTURE X.
+           02  CODEAV    PICTURE X.
+           02  CODEAO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  MSGFLDC    PICTURE X.
+           02  MSGFLDP    PICTURE X.
+           02  MSGFLDH    PICTURE X.
+           02  MSGFLDV    PICTURE X.
+           02  MSGFLDO  PIC X(79).

@@ -1,0 +1,128 @@
+       01  MAP01I.
+           02  FILLER PIC X(12).
+           02  TRANSACL    COMP  PIC  S9(4).
+           02  TRANSACF    PICTURE X.
+           02  FILLER REDEFINES TRANSACF.
+             03 TRANSACA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TRANSACI  PIC X(4).
+           02  DATEFLDL    COMP  PIC  S9(4).
+           02  DATEFLDF    PICTURE X.
+           02  FILLER REDEFINES DATEFLDF.
+             03 DATEFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  DATEFLDI  PIC X(10).
+           02  TIMEFLDL    COMP  PIC  S9(4).
+           02  TIMEFLDF    PICTURE X.
+           02  FILLER REDEFINES TIMEFLDF.
+             03 TIMEFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TIMEFLDI  PIC X(8).
+           02  CHOICEL    COMP  PIC  S9(4).
+           02  CHOICEF    PICTURE X.
+           02  FILLER REDEFINES CHOICEF.
+             03 CHOICEA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CHOICEI  PIC X(1).
+           02  MSGFLDL    COMP  PIC  S9(4).
+           02  MSGFLDF    PICTURE X.
+           02  FILLER REDEFINES MSGFLDF.
+             03 MSGFLDA    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  MSGFLDI  PIC X(79).
+       01  MAP01O REDEFINES MAP01I.
+           02  FILLER PIC X(12).
+           02  FILLER PICTURE X(3).
+           02  TRANSACC    PICTURE X.
+           02  TRANSACP    PICTURE X.
+           02  TRANSACH    PICTURE X.
+           02  TRANSACV    PICTURE X.
+           02  TRANSACO  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  DATEFLDC    PICTURE X.
+           02  DATEFLDP    PICTURE X.
+           02  DATEFLDH    PICTURE X.
+           02  DATEFLDV    PICTURE X.
+           02  DATEFLDO  PIC X(10).
+           02  FILLER PICTURE X(3).
+           02  TIMEFLDC    PICTURE X.
+           02  TIMEFLDP    PICTURE X.
+           02  TIMEFLDH    PICTURE X.
+           02  TIMEFLDV    PICTURE X.
+           02  TIMEFLDO  PIC X(8).
+           02  FILLER PICTURE X(3).
+           02  CHOICEC    PICTURE X.
+           02  CHOICEP    PICTURE X.
+           02  CHOICEH    PICTURE X.
+           02  CHOICEV    PICTURE X.
+           02  CHOICEO  PIC X(1).
+           02  FILLER PICTURE X(3).
+           02  MSGFLDC    PICTURE X.
+           02  MSGFLDP    PICTURE X.
+           02  MSGFLDH    PICTURE X.
+           02  MSGFLDV    PICTURE X.
+           02  MSGFLDO  PIC X(79).
+       01  MAP02I.
+           02  FILLER PIC X(12).
+           02  TRANS02L    COMP  PIC  S9(4).
+           02  TRANS02F    PICTURE X.
+           02  FILLER REDEFINES TRANS02F.
+             03 TRANS02A    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TRANS02I  PIC X(4).
+           02  DATE02L    COMP  PIC  S9(4).
+           02  DATE02F    PICTURE X.
+           02  FILLER REDEFINES DATE02F.
+             03 DATE02A    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  DATE02I  PIC X(10).
+           02  TIME02L    COMP  PIC  S9(4).
+           02  TIME02F    PICTURE X.
+           02  FILLER REDEFINES TIME02F.
+             03 TIME02A    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  TIME02I  PIC X(8).
+           02  CHOIC02L    COMP  PIC  S9(4).
+           02  CHOIC02F    PICTURE X.
+           02  FILLER REDEFINES CHOIC02F.
+             03 CHOIC02A    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  CHOIC02I  PIC X(1).
+           02  MSG02L    COMP  PIC  S9(4).
+           02  MSG02F    PICTURE X.
+           02  FILLER REDEFINES MSG02F.
+             03 MSG02A    PICTURE X.
+           02  FILLER   PICTURE X(4).
+           02  MSG02I  PIC X(79).
+       01  MAP02O REDEFINES MAP02I.
+           02  FILLER PIC X(12).
+           02  FILLER PICTURE X(3).
+           02  TRANS02C    PICTURE X.
+           02  TRANS02P    PICTURE X.
+           02  TRANS02H    PICTURE X.
+           02  TRANS02V    PICTURE X.
+           02  TRANS02O  PIC X(4).
+           02  FILLER PICTURE X(3).
+           02  DATE02C    PICTURE X.
+           02  DATE02P    PICTURE X.
+           02  DATE02H    PICTURE X.
+           02  DATE02V    PICTURE X.
+           02  DATE02O  PIC X(10).
+           02  FILLER PICTURE X(3).
+           02  TIME02C    PICTURE X.
+           02  TIME02P    PICTURE X.
+           02  TIME02H    PICTURE X.
+           02  TIME02V    PICTURE X.
+           02  TIME02O  PIC X(8).
+           02  FILLER PICTURE X(3).
+           02  CHOIC02C    PICTURE X.
+           02  CHOIC02P    PICTURE X.
+           02  CHOIC02H    PICTURE X.
+           02  CHOIC02V    PICTURE X.
+           02  CHOIC02O  PIC X(1).
+           02  FILLER PICTURE X(3).
+           02  MSG02C    PICTURE X.
+           02  MSG02P    PICTURE X.
+           02  MSG02H    PICTURE X.
+           02  MSG02V    PICTURE X.
+           02  MSG02O  PIC X(79).
