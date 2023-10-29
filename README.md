@@ -95,22 +95,25 @@ Une description de la base de données est donné dans l’annexe.
 
    |Table CHANSON |Table ALBUM |
    |--------------------|--------------------|
-   |<u>Code SACEM</u>  |<u>Code Album</u>  |
+   |Code SACEM*  |Code Album*  |
    |Titre Chanson |Titre Album |
    |Code Album    |            |
 
    |Table PERSONNE |Table MAISON_DIST |
    |--------------------|--------------------|
-   |<u>Code Personne</u>    |<u>Code SIREN</u>  |
+   |Code Personne*    |Code SIREN*  |
    |Identité Personne |Raison Sociale |
    |Code Type    |Adresse            |
    |             |Code Personne         |
 
    |Table CONTRAT |Table VENTES |
    |--------------------|--------------------|
-   |<u>Code Album</u>    |<u>Code Album</u>  |
-   |<u>Code SIREN</u> |<u>Date de vente</u> |
-   |<u>Code Personne</u>  |<u>Code SIREN</u> |
+   |Code Album*    |Code Album*  |
+   |Code SIREN* |Date de vente* |
+   |Code Personne*  |Code SIREN* |
    |Droits (en %)     |Quantité vendue   |
    |Date de signature |Prix de vente   |
    |Fonction |   |
+
+
+   Les clefs de table sont marquées par un **"*"**
