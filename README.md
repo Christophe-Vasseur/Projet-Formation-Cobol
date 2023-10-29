@@ -11,7 +11,7 @@ Notre équipe était composé de 5 personnes :
 * **Edouard Delbar**,
 * **Maxime Flavigny**,
 * **Rémi Brion**,
-* et moi-même **Christophe Vasseur**
+* et de moi-même **Christophe Vasseur**
 
 ## Les sources
 
@@ -26,11 +26,11 @@ Vous retrouverez dans les différents dossiers le fruit de notre travail :
 
 ## Description générale de l'application
 
-Le projet est de réaliser une application de gestion des ventes d'album musicaux et des droits d'auteur revenant à chacun des collaborateurs d'un album dans un environnement **Mainframe ISPF/CICS/DB2**.
+Le projet est de réaliser une application de gestion des ventes d'album musicaux et des droits d'auteur revenant à chacun des collaborateurs d'un album dans un environnement **Mainframe ISPF/CICS/VSAM/DB2**.
 
 La saisie des informations se fera via des écrans sous **CICS**.
 
-Pour l’instant, vous testez « *le meilleur des mondes* » sans cas d’erreur pour installer l’application (les cas nominaux). Les cas alternatifs sont mis en place après. 
+Pour l’instant, vous testez **« *le meilleur des mondes* »** sans cas d’erreur pour installer l’application (les cas nominaux). Les cas alternatifs seront mis en place par la suite. 
 
 ## Maquette de l'écran Menu à proposer au lancement de l'application
 
@@ -41,9 +41,9 @@ L’emplacement des libellés suivants sont :
 * Si la personne quitte l’application un message apparaît : **« FIN DE TRANSACTION »**
 * Les messages d’erreur apparaissent sur la 22eme ligne de l’écran.
 
-L’emplacement des autres lignes est à décider par vous-même mais respecte l’esprit général proposé de cet écran, qui est le « standard de l’Entreprise » sur tous les écrans.
+L’emplacement des autres lignes est à décider par vous-même mais doit respecter l’esprit général proposé de cet écran, qui est le **« standard de l’Entreprise »** sur tous les écrans.
 
-
+![Ecran du Menu Principal](https://github.com/Christophe-Vasseur/Projet-Formation-Cobol/blob/main/IMG/MenuPrinc.jpg "Menu Principal")
 
 Chaque option de ce menu principal propose un menu de choix :
 
@@ -79,21 +79,22 @@ Une description de la base de données est donné dans l’annexe.
 * Le **JCL** de la chaîne de mise à jour de la base de données
 * Les programmes **COBOL/DB2 BATCH** de mise à jour de la base de données
 
-## Noms des programmes et des écrans
+## Les noms des programmes et des écrans
 
-**$$** = votre groupe **G1**, **G2** ou **G3** et **?** est un numéro séquentiel ou les lettres de l’alphabet si insuffisant
+* **$$** = votre groupe **G1**, **G2** ou **G3** et **?** est un numéro séquentiel ou les lettres de l’alphabet si insuffisant
 
-Les programmes **CICS** s’appelleront : **API$$DB?**
+* Les programmes **CICS** s’appelleront : **API$$DB?**
 
-Les écrans **BMS** s’appelleront **MBL$$?**
+* Les écrans **BMS** s’appelleront **MBL$$?**
 
-Les codes transaction seront les 4 dernières lettres de vos **MAPS** Les codes des programmes **DB2** seront : **PGM$$???**
+* Les codes transaction seront les 4 dernières lettres de vos **MAPS** Les codes des programmes **DB2** seront : **PGM$$???**
 
 ## Annexe : Base de données existante à alimenter
 
 ## Description des tables
 
-       **Table CHANSON**                               **Table ALBUM**
-       Code SACEM                                  Code Album
-       Titre Chanson                               Titre Album 
-       Code Album                       
+       |**Table CHANSON**   |**Table ALBUM**     |
+       |--------------------|--------------------|
+       |Code SACEM          |Code Album  |
+       |Titre Chanson       |Titre Album |
+       |Code Album          |            |
