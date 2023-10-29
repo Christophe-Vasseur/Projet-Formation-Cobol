@@ -93,8 +93,8 @@ Une description de la base de données est donné dans l’annexe.
 
 ## Description des tables
 
-       |**Table CHANSON**   |**Table ALBUM**     |
-       |--------------------|--------------------|
-       |Code SACEM          |Code Album  |
-       |Titre Chanson       |Titre Album |
-       |Code Album          |            |
+   |Table CHANSON |Table ALBUM |
+   |--------------------|--------------------|
+   |Code SACEM    |Code Album  |
+   |Titre Chanson |Titre Album |
+   |Code Album    |            |
