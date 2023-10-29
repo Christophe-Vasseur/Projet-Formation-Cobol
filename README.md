@@ -95,6 +95,13 @@ Une description de la base de données est donné dans l’annexe.
 
    |Table CHANSON |Table ALBUM |
    |--------------------|--------------------|
-   |Code SACEM    |Code Album  |
+   |\_Code SACEM\_    |\_Code Album\_  |
    |Titre Chanson |Titre Album |
    |Code Album    |            |
+
+   |Table PERSONNE |Table MAISON_DIST |
+   |--------------------|--------------------|
+   |\_Code Personne\_    |\_Code SIREN\_  |
+   |Identité Personne |Raison Sociale |
+   |Code Type    |Adresse            |
+   |             |Code Personne         |
