@@ -48,10 +48,15 @@ L’emplacement des autres lignes est à décider par vous-même mais doit respe
 Chaque option de ce menu principal propose un menu de choix :
 
 1 – CREATION D UN(E) xxxxxx
+
 2 - CONSULTATION D UN(E) xxxxxx
+
 3 – SUPPRESSION D UN(E) xxxxxx
+
 4 – MODIFICATION D UN(E) xxxxxx
+
 (5 – Liste des xxxxxx         si projet est terminé)
+
 
 Un message d’information **« EN COURS DE DEVELOPPEMENT »** est à produire si le choix est en cours de développement sur l’écran du menu principal et secondaire. 
 
