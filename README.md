@@ -2,7 +2,7 @@
 
 ## Présentation
 
-Suite à une formation de plusieurs mois de **"Développeur Grands Systèmes - Cobol"**, il nous a été demandé de réaliser un projet de fin de formation. Ce dépôt rassemble donc ce projet **Mainframe**. Ce travail d'équipe a été réalisé pendant 11 jours.
+Suite à une formation de **"Développeur Grands Systèmes - Cobol"** de plusieurs mois, il nous a été demandé de réaliser un projet de fin de formation. Ce dépôt rassemble donc ce projet **Mainframe**. Ce travail d'équipe a été réalisé pendant 11 jours.
 
 ## L'équipe des développeurs
 
@@ -47,13 +47,13 @@ L’emplacement des autres lignes est à décider par vous-même mais doit respe
 
 Chaque option de ce menu principal propose un menu de choix :
 
-1 – CREATION D UN(E)...
-2 - CONSULTATION D UN(E)...
-3 – SUPPRESSION D UN(E)...
-4 – MODIFICATION D UN(E)...
-(5 – Liste des...         si projet est terminé)
+1 – CREATION D UN(E) xxxxxx
+2 - CONSULTATION D UN(E) xxxxxx
+3 – SUPPRESSION D UN(E) xxxxxx
+4 – MODIFICATION D UN(E) xxxxxx
+(5 – Liste des xxxxxx         si projet est terminé)
 
-Un message d’information **« EN COURS DE DEVELOPPEMENT »** est à produire si le choix est en cours de développement sur l’écran menu principal et secondaire. 
+Un message d’information **« EN COURS DE DEVELOPPEMENT »** est à produire si le choix est en cours de développement sur l’écran du menu principal et secondaire. 
 
 Les informations seront stockées dans des fichiers **VSAM KSDS** et tous les accès à ces fichiers sont externalisés dans des services appelés par les programmes qui gèrent les écrans.
 
@@ -95,13 +95,22 @@ Une description de la base de données est donné dans l’annexe.
 
    |Table CHANSON |Table ALBUM |
    |--------------------|--------------------|
-   |\_Code SACEM\_    |\_Code Album\_  |
+   |<u>Code SACEM</u>  |<u>Code Album</u>  |
    |Titre Chanson |Titre Album |
    |Code Album    |            |
 
    |Table PERSONNE |Table MAISON_DIST |
    |--------------------|--------------------|
-   |\_Code Personne\_    |\_Code SIREN\_  |
+   |<u>Code Personne</u>    |<u>Code SIREN</u>  |
    |Identité Personne |Raison Sociale |
    |Code Type    |Adresse            |
    |             |Code Personne         |
+
+   |Table CONTRAT |Table VENTES |
+   |--------------------|--------------------|
+   |<u>Code Album</u>    |<u>Code Album</u>  |
+   |<u>Code SIREN</u> |<u>Date de vente</u> |
+   |<u>Code Personne</u>  |<u>Code SIREN</u> |
+   |Droits (en %)     |Quantité vendue   |
+   |Date de signature |Prix de vente   |
+   |Fonction |   |
