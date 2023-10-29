@@ -120,4 +120,4 @@ Une description de la base de données est donné dans l’annexe.
 
 ### La base de données
 
-![Base de données](https://github.com/Christophe-Vasseur/Projet-Formation-Cobol/blob/main/IMG/BDD.jpg "Base de données DB2") Principal")
+![Base de données](https://github.com/Christophe-Vasseur/Projet-Formation-Cobol/blob/main/IMG/BDD.jpg "Base de données DB2")
