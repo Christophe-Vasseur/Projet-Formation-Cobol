@@ -91,7 +91,7 @@ Une description de la base de données est donné dans l’annexe.
 
 ## Annexe : Base de données existante à alimenter
 
-## Description des tables
+### Description des tables
 
    |Table CHANSON |Table ALBUM |
    |--------------------|--------------------|
@@ -117,3 +117,7 @@ Une description de la base de données est donné dans l’annexe.
 
 
    Les clefs de table sont marquées par un **"*"**
+
+### La base de données
+
+![Base de données](https://github.com/Christophe-Vasseur/Projet-Formation-Cobol/blob/main/IMG/BDD.jpg "Base de données DB2") Principal")
