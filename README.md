@@ -47,27 +47,27 @@ L’emplacement des autres lignes est à décider par vous-même mais doit respe
 
 Chaque option de ce menu principal propose un menu de choix :
 
-1 – CREATION D UN(E)   …
-2 - CONSULTATION D UN(E)  …
-3 – SUPPRESSION D UN(E)   …
-4 – MODIFICATION D UN(E)   …
-(5 – Liste des …         si projet est terminé)
+1 – CREATION D UN(E)...
+2 - CONSULTATION D UN(E)...
+3 – SUPPRESSION D UN(E)...
+4 – MODIFICATION D UN(E)...
+(5 – Liste des...         si projet est terminé)
 
-Un message d’information « EN COURS DE DEVELOPPEMENT » est à produire si le choix est en cours de développement sur l’écran menu principal et secondaire. 
+Un message d’information **« EN COURS DE DEVELOPPEMENT »** est à produire si le choix est en cours de développement sur l’écran menu principal et secondaire. 
 
-Les informations seront stockées dans des fichiers VSAM KSDS et tous les accès à ces fichiers sont externalisés dans des services appelés par les programmes qui gèrent les écrans.
+Les informations seront stockées dans des fichiers **VSAM KSDS** et tous les accès à ces fichiers sont externalisés dans des services appelés par les programmes qui gèrent les écrans.
 
 Rappel :
 
-* Une indépendance entre les accès physiques et les traitements doit exister, c’est-à- dire, je peux changer les accès physiques (par exemple, VSAM en accès DB2) sans modifier les traitements, c’est-à-dire sans avoir à modifier le code des programmes de gestion des fonctionnalités.
+* Une indépendance entre les accès physiques et les traitements doit exister, c’est-à- dire, je peux changer les accès physiques (par exemple, **VSAM** en accès **DB2**) sans modifier les traitements, c’est-à-dire sans avoir à modifier le code des programmes de gestion des fonctionnalités.
 
 * Des obligations normes et méthodes de développement, un programme de gestion gère un seul écran et un écran est géré par un seul programme (un écran = un programme)
 
 ## Alimentation de la base relationnelle DB2 par les fichiers VSAM KSDS
 
-Dans un premier temps, il a été décidé d’alimenter la base DB2 existante avec les fichiers **VSAM KSDS**, mis à jour par l’application de gestion des ventes d’album.
+Dans un premier temps, il a été décidé d’alimenter la base **DB2** existante avec les fichiers **VSAM KSDS**, mis à jour par l’application de gestion des ventes d’album.
 
-Vous devez proposer une chaine de programmes BATCH pour effectuer ce travail qui met à jour la base **DB2** à partir des fichiers **VSAM KSDS** modifiés par l’application de gestion.
+Vous devez proposer une chaine de programmes **BATCH** pour effectuer ce travail qui met à jour la base **DB2** à partir des fichiers **VSAM KSDS** modifiés par l’application de gestion.
 
 Une description de la base de données est donné dans l’annexe.
 
